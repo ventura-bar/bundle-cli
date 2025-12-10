@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production
+build/
+dist/
+
+# Misc
+.DS_Store
+.env
+.npmrc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Project specific
+bundles/
+*.tgz
+*.jar
+*.pom
+*.whl
+*.nupkg
+*.apk
+*-bundle/
