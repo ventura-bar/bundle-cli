@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A CLI tool to bundle packages and their dependencies for offline and air-gapped environments.",
   "main": "index.js",
-  "bin": "./bin/index.js",
+  "bin": {
+    "pkg-deps": "bin/index.js"
+  },
   "scripts": {
     "test": "node test/handlers.test.js"
   },
