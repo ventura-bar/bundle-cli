@@ -1,4 +1,4 @@
-# Pkg Pack
+# Pkg Deps
 
 A CLI tool to download packages and their dependencies for offline use.
 
@@ -30,7 +30,7 @@ npm install -g .
 ## Usage
 
 ```sh
-pkg-pack <command> [options]
+pkg-deps <command> [options]
 ```
 
 ### Commands
@@ -65,25 +65,25 @@ You can override this location using the `--output` flag.
 
 #### NPM
 ```sh
-pkg-pack npm --package axios --version 1.0.0
+pkg-deps npm --package axios --version 1.0.0
 ```
 Creates `bundles/axios-1.0.0-bundle/` containing `.tgz` files.
 
 #### Python (Pip)
 ```sh
-pkg-pack pip --package requests --version 2.31.0
+pkg-deps pip --package requests --version 2.31.0
 ```
 Creates `bundles/requests-2.31.0-bundle/` containing whl/tar.gz files.
 
 #### Java (Maven)
 ```sh
-pkg-pack maven --package org.mockito:mockito-core --version 5.10.0
+pkg-deps maven --package org.mockito:mockito-core --version 5.10.0
 ```
 Creates `bundles/mockito-core-5.10.0-bundle/` containing JARs and POMs.
 
 #### Private Repository Example
 ```sh
-pkg-pack npm \
+pkg-deps npm \
   --package @myorg/private-pkg \
   --repo https://registry.myorg.com \
   --username myuser \
@@ -95,5 +95,5 @@ pkg-pack npm \
 Any additional arguments passed to the CLI will be forwarded to the underlying package manager command.
 
 ```sh
-pkg-pack npm --package axios -- --registry=https://registry.npmmirror.com
+pkg-deps npm --package axios -- --registry=https://registry.npmmirror.com
 ```

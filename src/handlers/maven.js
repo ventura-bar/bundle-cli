@@ -69,7 +69,7 @@ class MavenHandler extends BaseHandler {
     const actualVersion = version || 'LATEST';
     const artifact = `${name}:${actualVersion}`;
 
-    const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'pkg-pack-maven-'));
+    const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'pkg-deps-maven-'));
 
     try {
       console.log(chalk.blue(`Downloading ${artifact} and dependencies...`));

@@ -6,7 +6,7 @@ const packageJson = require('../package.json');
 const { handlePackage } = require('../src/index');
 
 program
-  .name('pkg-pack')
+  .name('pkg-deps')
   .description('CLI to bundle packages for offline use')
   .version(packageJson.version, '-V, --cli-version', 'output the version number');
 

@@ -1,0 +1,14 @@
+# Exclude development files
+node_modules/
+test/
+bundles/
+.git/
+.gitignore
+.antigravityignore
+package-lock.json
+OFFLINE_GUIDE.md
+implementation_plan.md
+task.md
+walkthrough.md
+*test.js
+.DS_Store

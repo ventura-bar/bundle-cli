@@ -1,10 +1,10 @@
 {
-  "name": "pkg-pack",
+  "name": "pkg-deps",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
-    "pkg-pack": "./bin/index.js"
+    "pkg-deps": "./bin/index.js"
   },
   "scripts": {
     "test": "node test/handlers.test.js"

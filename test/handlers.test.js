@@ -3,7 +3,7 @@ const path = require('path');
 const { execSync, spawnSync } = require('child_process');
 const assert = require('assert');
 
-const PKG_PACK_PATH = path.join(__dirname, '..', 'bin', 'index.js');
+const PKG_DEPS_PATH = path.join(__dirname, '..', 'bin', 'index.js');
 
 // Helper to check if a command exists
 function commandExists(command) {
@@ -75,7 +75,7 @@ const TESTS = {
 };
 
 function runCLI(type, packageName, version, extraArgs = []) {
-    const args = [PKG_PACK_PATH, type, '--package', packageName];
+    const args = [PKG_DEPS_PATH, type, '--package', packageName];
     if (version) {
         args.push('--version', version);
     }
@@ -128,7 +128,7 @@ function checkFiles(outputDir, expectedFiles, expectedPatterns, minFiles) {
 }
 
 async function runTests() {
-    console.log('🧪 Running pkg-pack handler tests...\n');
+    console.log('🧪 Running pkg-deps handler tests...\n');
 
     let passed = 0;
     let failed = 0;

@@ -12,7 +12,7 @@ class NpmHandler extends BaseHandler {
 
     async _download(name, version, extraArgs, repoUrl, username, password, outDir) {
         const packageName = version ? `${name}@${version}` : name;
-        const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'pkg-pack-npm-'));
+        const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), 'pkg-deps-npm-'));
 
         try {
             console.log(chalk.blue(`Installing ${packageName} to temporary directory...`));
